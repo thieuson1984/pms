@@ -10,8 +10,16 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
-
+/** RESTful Controllers **/
+Route::controller( 'admin', 'AdminController' );
+//Route::resource('admin', 'AdminController');
 Route::get('/', function()
 {
 	return View::make('hello');
+});
+Route::group(array('prefix' => 'admin'), function()
+{
+	// main page for the admin section (app/views/admin/dash.blade.php)
+
+	Route::get('/', 'AdminController@showDash');
 });
