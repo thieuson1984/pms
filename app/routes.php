@@ -23,3 +23,5 @@ Route::group(array('prefix' => 'admin'), function()
 
 	Route::get('/', 'AdminController@showDash');
 });
+
+Route::resource('users', 'UsersController');
