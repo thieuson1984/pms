@@ -31,6 +31,9 @@
     {{ HTML::script('asset/js/jquery.js') }}
     <!-- Easytree CSS -->
     {{ HTML::style('asset/easytree/css/easyTree.css') }}
+    <!-- Easy Tree -->
+    {{ HTML::script('asset/easytree/src/easyTree.js') }}
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>

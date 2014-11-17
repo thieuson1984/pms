@@ -12,10 +12,13 @@
 */
 /** RESTful Controllers **/
 Route::controller( 'admin', 'AdminController' );
+Route::resource('users', 'UsersController');
+
+Route::resource('userroles', 'UserrolesController');
 //Route::resource('admin', 'AdminController');
 Route::get('/', function()
 {
-	return View::make('hello');
+  return View::make('index');
 });
 Route::group(array('prefix' => 'admin'), function()
 {
@@ -24,4 +27,3 @@ Route::group(array('prefix' => 'admin'), function()
 	Route::get('/', 'AdminController@showDash');
 });
 
-Route::resource('users', 'UsersController');

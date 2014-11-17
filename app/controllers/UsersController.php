@@ -36,7 +36,7 @@ class UsersController extends BaseController {
 	public function create()
 	{
 		return View::make('users.create')->with('title','Add new user')
-										->with('pageheader','Users > Add');;
+										->with('pageheader','Users > Add');
 	}
 
 	/**
